@@ -25,7 +25,7 @@
                     <a href="/about.html">About Us</a>
                 </li>
                 <li>
-                    <a href="/#contact-us">Contact Us</a>
+                    <a href="#contact-us">Contact Us</a>
                 </li>
                 <li>
                     <a href="/specials.html">Specials</a>
@@ -36,21 +36,20 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero">
         <div class="hero-cta">
-            <h2>Check Out Our Amazing Shop!</h2>
-            <p>
-                Make Bloom Valley Nursery your one stop shop for all your gardening needs. 
-                Check out our awesome inventory!
-            </p>
-            <a href="#shopping-section">
+            <h2>Check Out our Monthly Specials!</h2>
+            <p>First time and returning shoppers can take advantage of our monthly coupons! 
+               Start your month with fresh supplies to get your garden right! Only able to use once per month. </p>
+            <a href="/gallery.html">
                 <button>
                     Shop Now!
                 </button>
             </a>
         </div>
         <div class="hero-img">
-            <img src="./assets/images/pexels-photo-7263019.webp" alt="Individual shopping for flowers">
+            <img src="./assets/images/Client1_PottingSoil.png" alt="soil for gardening">
         </div>
     </section>
 
@@ -69,63 +68,63 @@
         </div>
     </div>
 
-    <section class="shopping-section" id="shopping-section">
-        <div class="shopping-list">
-            <div class="shop-cards">
+    <section class="catergories-offered">
+        <h2>Monthly Specials</h2>
+        <div class="coupon-list">
+            <div class="coupon-cards">
                 <img src="./assets/images/Client1_AloePlant.png" alt="aloe plant">
-                <h3>Aloe Plant</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart" data-id="1" data-name="Aloe Plant" data-price="19.99">Add to Cart</button>
+                <h3>Plants Coupon</h3>
+                <button class="coupon-btn" data-id="4" data-name="plant">Claim Coupon</button>
             </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_SpiderPlant.png" alt="spider plant">
-                <h3>Spider Plant</h3>
-                <p>$22.99</p>
-                <button class="add-to-cart" data-id="2" data-name="Spider Plant" data-price="22.99">Add to Cart</button>
+            <div class="coupon-cards">
+                <img src="./assets/images/Client1_BirchTree.png" alt="aloe plant">
+                <h3>Trees Coupon</h3>
+                <button class="coupon-btn" data-id="4" data-name="tree">Claim Coupon</button>
             </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_StringofPearls.png" alt="string of pearls plant">
-                <h3>String of Pearls Plant</h3>
-                <p>$27.99</p>
-                <button class="add-to-cart" data-id="3" data-name="String of Pearls" data-price="27.99">Add to Cart</button>
+            <div class="coupon-cards">
+                <img src="./assets/images/Client1_BirdHouse.png" alt="aloe plant">
+                <h3>Gardening Accessories Coupon</h3>
+                <button class="coupon-btn" data-id="4" data-name="accessories">Claim Coupon</button>
             </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_AppleTree.png" alt="apple tree">
-                <h3>Apple Tree</h3>
-                <p>$79.99</p>
-                <button class="add-to-cart" data-id="4" data-name="Apple Tree" data-price="79.99">Add to Cart</button>
-            </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_BirchTree.png" alt="birch tree">
-                <h3>Birch Tree</h3>
-                <p>$89.99</p>
-                <button class="add-to-cart" data-id="5" data-name="Birch Tree" data-price="89.99">Add to Cart</button>
-            </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_MapleTree.png" alt="maple tree">
-                <h3>Maple Tree</h3>
-                <p>$99.99</p>
-                <button class="add-to-cart" data-id="6" data-name="Maple Tree" data-price="99.99">Add to Cart</button>
-            </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_BirdHouse.png" alt="bird house">
-                <h3>Bird House</h3>
-                <p>$34.99</p>
-                <button class="add-to-cart" data-id="7" data-name="Bird House" data-price="34.99">Add to Cart</button>
-            </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_PottingSoil.png" alt="potting soil">
-                <h3>Potting Soil</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart" data-id="8" data-name="Potting Soil" data-price="19.99">Add to Cart</button>
-            </div>
-            <div class="shop-cards">
-                <img src="./assets/images/Client1_WateringCan.png" alt="watering can">
-                <h3>Watering Can</h3>
-                <p>$14.99</p>
-                <button class="add-to-cart" data-id="9" data-name="Water Can" data-price="14.99">Add to Cart</button>
-            </div>
+        </div>
+    </section>
 
+    <section id="contact-us" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Bloom Valley Nursery</h3>
+                <p>
+                    Any questions or concerns you might have?
+                    <br />
+                    Please don't hesistate to call or send us a message!
+                </p>
+                <address>
+                    105 Main Street <br />
+                    Bloom Valley, CA 12345 <br />
+                    P: 777.888.5555 <br />
+                    E: <a href="mailto:info@bloomvalleynursery.io">info@bloomvalleynursery.io</a>
+                </address>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form id="contact-input">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" placeholder="Your Name" required />
+                    
+                    <label for="contact-email">Your email</label>
+                    <input type="email" id="contact-email" placeholder="Your email" required/>
+                
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" placeholder="Message" required></textarea>
+                
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11226.83725793185!2d-117.04955610159459!3d33.220422049177365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalifornia%20nursery!5e0!3m2!1sen!2sus!4v1752182098202!5m2!1sen!2sus" 
+                frameborder="0" style="border: 0;" allowfullscreen>
+            </iframe>
         </div>
     </section>
     <footer>
@@ -164,6 +163,7 @@
                 <i class="fa-brands fa-x-twitter fa-lg"></i>
             </div>
         </div>
+    
     </footer>
     <script src="./assets/js/scripts.js" defer></script>
 </body>

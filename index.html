@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom Valley Nursery</title>
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://kit.fontawesome.com/dba77f2181.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -18,16 +19,172 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a>Gallery</a>
+                    <a href="/gallery.html">Gallery</a>
                 </li>
                 <li>
-                    <a>About Us</a>
+                    <a href="/about.html">About Us</a>
                 </li>
                 <li>
-                    <a>Contact Us</a>
+                    <a href="#contact-us">Contact Us</a>
+                </li>
+                <li>
+                    <a href="/specials.html">Specials</a>
+                </li>
+                <li>
+                    <a id="view-cart" class="cart-open"><i class="fas fa-shopping-cart"></i>(<span id="count">0</span>)</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section class="hero">
+        <div class="hero-cta">
+            <h2>Get your Garden Needs Today!</h2>
+            <p>Make your vision come true and transform your garden. Shop all your garden needs at Bloom Valley Nursery.</p>
+            <a href="/gallery.html">
+                <button>
+                    Shop Now!
+                </button>
+            </a>
+        </div>
+        <div class="hero-img">
+            <img src="./assets/images/Client1_PottingSoil.png" alt="soil for gardening">
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="modal-x">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="total-price">0</span></p>
+            </div>
+            <div class="button-align">
+                <button id="clear-button" class="clear-cart">Clear Cart</button>
+                <button id="process-button" class="clear-cart">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="catergories-offered">
+        <h2>Our Products</h2>
+        <div class="catergories-list">
+            <div class="catergories-card">
+                <img src="./assets/images/Client1_AloePlant.png" alt="aloe plant">
+                <h3>Plants</h3>
+            </div>
+            <div class="catergories-card">
+                <img src="./assets/images/Client1_BirchTree.png" alt="aloe plant">
+                <h3>Trees</h3>
+            </div>
+            <div class="catergories-card">
+                <img src="./assets/images/Client1_BirdHouse.png" alt="aloe plant">
+                <h3>Gardening Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-trees">
+        <h2>Featured Trees</h2>
+        <div class="tree-list">
+            <div class="tree-cards">
+                <img src="./assets/images/Client1_AppleTree.png" alt="apple tree">
+                <h3>Apple Tree</h3>
+                <p>$79.99</p>
+                <button class="add-to-cart" data-id="4" data-name="Apple Tree" data-price="79.99">Add to Cart</button>
+            </div>
+            <div class="tree-cards">
+                <img src="./assets/images/Client1_BirchTree.png" alt="birch tree">
+                <h3>Birch Tree</h3>
+                <p>$89.99</p>
+                <button class="add-to-cart" data-id="5" data-name="Birch Tree" data-price="89.99">Add to Cart</button>
+            </div>
+            <div class="tree-cards">
+                <img src="./assets/images/Client1_MapleTree.png" alt="maple tree">
+                <h3>Maple Tree</h3>
+                <p>$99.99</p>
+                <button class="add-to-cart" data-id="6" data-name="Maple Tree" data-price="99.99">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div>
+                <h3>Bloom Valley Nursery</h3>
+                <p>
+                    Any questions or concerns you might have?
+                    <br />
+                    Please don't hesistate to call or send us a message!
+                </p>
+                <address>
+                    105 Main Street <br />
+                    Bloom Valley, CA 12345 <br />
+                    P: 777.888.5555 <br />
+                    E: <a href="mailto:info@bloomvalleynursery.io">info@bloomvalleynursery.io</a>
+                </address>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form id="contact-input">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" placeholder="Your Name" required />
+                    
+                    <label for="contact-email">Your email</label>
+                    <input type="email" id="contact-email" placeholder="Your email" required/>
+                
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" placeholder="Message" required></textarea>
+                
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11226.83725793185!2d-117.04955610159459!3d33.220422049177365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalifornia%20nursery!5e0!3m2!1sen!2sus!4v1752182098202!5m2!1sen!2sus" 
+                frameborder="0" style="border: 0;" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h2>
+                    <img src="assets/images/Client1_LogoPalette2_F0C06D.png" alt="logo">
+                    Made by Bloom Valley Nursery.
+                </h2>
+            </div>
+    
+            <div>
+                <h3>Navigation</h3>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/gallery.html">Gallery</a>
+                    <a href="/about.html">About Us</a>
+                    <a href="/#contact-us">Contact Us</a>
+                </div>
+            </div>
+    
+            <div>
+                <div class="news-letter">
+                    <h3>Subscribe to Our Newsletter!</h3>
+                    <form id="newsletter-form">
+                        <input type="email" id="news-email" placeholder="Enter your Email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div>
+                <h3>&copy; 2025 Bloom Valley Nursery, Inc.</h3>
+                <i class="fa-brands fa-facebook fa-lg"></i>
+                <i class="fa-brands fa-instagram fa-lg"></i>
+                <i class="fa-brands fa-x-twitter fa-lg"></i>
+            </div>
+        </div>
+    
+    </footer>
+    <script src="./assets/js/scripts.js" defer></script>
 </body>
 </html>
