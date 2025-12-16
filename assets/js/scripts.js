@@ -2,8 +2,6 @@ let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 var modal = document.getElementById("myModal");
 var cartButton = document.getElementById("view-cart");
 var closeButton = document.getElementById("close");
-var clearButton = document.getElementById('clear-button');
-var processButton = document.getElementById('process-button');
 var contactName = document.getElementById('contact-name');
 var contactEmail = document.getElementById('contact-email');
 var contactMessage = document.getElementById('contact-message');
@@ -63,12 +61,20 @@ function addToCart(event) {
     cartCount();
 };
 
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener("click", addToCart);
+});
+
 function cartCount(){
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
     document.getElementById("count").textContent = cartCount;
 };
 
-function clearCart() {
+document.addEventListener("DOMContentLoaded", function() {
+    cartCount();
+});
+
+document.getElementById('clear-button')?.addEventListener('click', function() {
     cart = [];
     sessionStorage.removeItem('cart');
     cartCount();
@@ -78,9 +84,9 @@ function clearCart() {
     message.innerHTML = 'Cart Cleared';
     document.getElementById('total-price').textContent = 0;
     cartItems.appendChild(message);
-};
+})
 
-function processOrder() {
+document.getElementById('process-button')?.addEventListener('click', function() {
     cart = [];
     sessionStorage.removeItem('cart');
     cartCount();
@@ -90,15 +96,6 @@ function processOrder() {
     message.innerHTML = 'Thank You for your order!<br /> Please wait for a confirmation email.';
     document.getElementById('total-price').textContent = 0;
     cartItems.appendChild(message);
-};
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    cartCount();
-});
-
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener("click", addToCart);
 });
 
 document.getElementById('contact-input')?.addEventListener('submit', function(event) {
@@ -125,24 +122,16 @@ document.getElementById("newsletter-form")?.addEventListener('submit', function(
 });
 
 document.querySelectorAll('.coupon-btn').forEach(button => {
-    button.addEventListener('click', couponDisplay);
+    button.addEventListener('click', function(event) {
+        const button = event.target;
+        const couponData = button.getAttribute('data-name');
+
+        if (couponData == 'plant') {
+            alert('PLANT15');
+        } else if (couponData == 'tree') {
+            alert('TREE20');
+        } else {
+            alert('DIRT20');
+        }
+    });
 });
-
-function couponDisplay(event) {
-    const button = event.target;
-    const couponData = button.getAttribute('data-name');
-
-    if(couponData == 'plant'){
-        alert('PLANT15');
-    } else if(couponData == 'tree') {
-        alert('TREE20');
-    } else {
-        alert('DIRT20');
-    }
-};
-
-
-clearButton.addEventListener('click', clearCart);
-
-processButton.addEventListener('click', processOrder);
-
